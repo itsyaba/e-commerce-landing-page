@@ -24,7 +24,7 @@ interface Props {
 export default function Navbar({ amountOfShoes, setAmountOfShoes }: Props) {
   // const [navOpened, setNavOpened] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
-  const [disabled, setDisabled] = useState(false);
+    const [disabled, setDisabled] = useState(false);
   const result = amountOfShoes * 125;
 
   useEffect(() => {

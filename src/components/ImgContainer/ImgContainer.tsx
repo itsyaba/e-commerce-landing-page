@@ -15,7 +15,7 @@ const ImgContainer = () => {
   const [activeImg, setActiveImg] = useState(imgProduct1);
   const TRANSITION_DURATION = 200;
   const [opened, setOpened] = useState(false);
-  const [embla] = useState(null);
+    const [embla, setEmbla] = useState<Embla | null>(null);
 
   useAnimationOffsetEffect(embla, TRANSITION_DURATION);
   return (
@@ -77,6 +77,7 @@ const ImgContainer = () => {
         loop
         slideGap="md"
         className="md:hidden w-5/6 p-2"
+        getEmblaApi={setEmbla}
         styles={{
           indicator: {
             transition: "width 250ms ease",
